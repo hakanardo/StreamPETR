@@ -1,0 +1,14 @@
+{
+    // "image": "pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime",
+    "build": {"dockerfile": "Dockerfile"},
+    "containerEnv": {"DISPLAY": "${localEnv:DISPLAY}"},
+    "runArgs": ["--net=host", "--gpus", "all"],
+    "customizations": {
+        "vscode": {
+          "extensions": ["ms-python.python", "ms-azuretools.vscode-docker"]
+        }
+    },
+    "mounts": [
+      "source=${localEnv:HOME},target=${localEnv:HOME},type=bind,consistency=cached",
+    ]
+}

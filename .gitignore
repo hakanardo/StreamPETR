@@ -1,0 +1,5 @@
+__pycache__
+work_dirs
+.vscode
+data
+mmdetection3d
